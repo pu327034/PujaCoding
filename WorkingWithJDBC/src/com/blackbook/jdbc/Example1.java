@@ -15,7 +15,7 @@ public class Example1 {
 		String url="jdbc:oracle:thin:@localhost:1521/XE";
 		String username="hr";
 		String password="hr";
-		/*String query="INSERT INTO students VALUES (101,\'kumar\')";
+		String query="INSERT INTO students VALUES (101,\'kumar\')";
 		String query1="INSERT INTO students VALUES(?,?)";
 		Class.forName(driverClassName);
 		Connection con=DriverManager.getConnection(url, username, password);
@@ -29,8 +29,8 @@ public class Example1 {
 		ps.setString(2, "kumari");
 		int n=ps.executeUpdate();
 		System.out.println("Number of rows effected by this query= " +n);
-		con.close();*/
-		Date dt=new Date();
+		con.close();
+		/*Date dt=new Date();
 		
 		java.sql.Date d=(java.sql.Date)dt;
 		System.out.println("sql date: "+d);
@@ -44,6 +44,12 @@ public class Example1 {
 		ps.setDate(2,d);
 		int n=ps.executeUpdate();
 		System.out.println("Number of rows effected by this query= " +n);
+		
+		String query2="INSERT INTO students VALUES(?,?)";
+		PreparedStatement ps1=con.prepareStatement(query2);
+		ps1.setString(1, "Silky");
+		ps1.setDate(2,d);
+		int n1=ps1.executeUpdate();*/
 		
 	}
 
